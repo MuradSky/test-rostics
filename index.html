@@ -23,8 +23,12 @@
     document.addEventListener('DOMContentLoaded', ()=> {
         document.querySelector('#form').addEventListener('submit', async e=> {
             e.preventDefault()
-            await fetch('https://api-dev.chickenpromo.ru/api/auth/login?api_token=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVdHRqZmNBU0c0enRRUkdvck5zWGw5R0tMaGhoaWtVejdqMGFUNmtZTkdzIn0.eyJleHAiOjE3MjEzOTg2MDUsImlhdCI6MTcyMTM5ODMwNSwianRpIjoiNGE3ZDg0ZTQtZDQxOS00NzgwLTkxNTEtMjBmY2NiZjBiMTczIiwiaXNzIjoiaHR0cHM6Ly9zc28tc3RvcmVzLnN0YWdlLmRpZ2l0YWwudW5pLnJlc3QvcmVhbG1zL2V4dGVybmFsLWNsaWVudHMiLCJhdWQiOiJjdXN0b21lci12a3VzbmF5YS1pZ3JhLWljZS1hZGFwdGVyIiwic3ViIjoiOTMyODA0ZTUtZDU5OC00MzdhLThhYmEtZWVlNDZhNzRmOWMwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicGFydG5lci1pY2UiLCJhY3IiOiIxIiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiNS4xODcuNDMuODIiLCJjbGllbnRJZCI6InBhcnRuZXItaWNlIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LXBhcnRuZXItaWNlIiwiY2xpZW50QWRkcmVzcyI6IjUuMTg3LjQzLjgyIn0.qNe4hjNZ-fLrfGpUw423FbjULPmvZWM8cRIGlmpLgg21yZSUR-EMuYjn0QM7Z20ZDfm3wB63_RXD-bjdlb7ZEU6wCTEsqMVtrtjrpqkN_mokGT6q9gD-VfYU0EZloB7BOxkEjpH-nh7OHQNslCvPXoocDqY2TRNir3q6nNyhLT2Sosp3j_1neJ-mUWqzlLvXIV7JYgd7WbQuONsy3NUGIpQjxErrdAtsMY-i7-RAEsKb7uIoOEbDyKLddJ80GaPsNNQOo4sIWCPlB1sxm5Me0_GJMKDAHSmUBt4euRJX07ZRHhIOcFjJuX1m6_63z2uVrQG_OXrrURC-IcMom2jiwQ', {
-                method: 'POST'
+            await axios.post('https://api-dev.chickenpromo.ru/api/auth/login?api_token=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVdHRqZmNBU0c0enRRUkdvck5zWGw5R0tMaGhoaWtVejdqMGFUNmtZTkdzIn0.eyJleHAiOjE3MjEzOTg2MDUsImlhdCI6MTcyMTM5ODMwNSwianRpIjoiNGE3ZDg0ZTQtZDQxOS00NzgwLTkxNTEtMjBmY2NiZjBiMTczIiwiaXNzIjoiaHR0cHM6Ly9zc28tc3RvcmVzLnN0YWdlLmRpZ2l0YWwudW5pLnJlc3QvcmVhbG1zL2V4dGVybmFsLWNsaWVudHMiLCJhdWQiOiJjdXN0b21lci12a3VzbmF5YS1pZ3JhLWljZS1hZGFwdGVyIiwic3ViIjoiOTMyODA0ZTUtZDU5OC00MzdhLThhYmEtZWVlNDZhNzRmOWMwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoicGFydG5lci1pY2UiLCJhY3IiOiIxIiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiNS4xODcuNDMuODIiLCJjbGllbnRJZCI6InBhcnRuZXItaWNlIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LXBhcnRuZXItaWNlIiwiY2xpZW50QWRkcmVzcyI6IjUuMTg3LjQzLjgyIn0.qNe4hjNZ-fLrfGpUw423FbjULPmvZWM8cRIGlmpLgg21yZSUR-EMuYjn0QM7Z20ZDfm3wB63_RXD-bjdlb7ZEU6wCTEsqMVtrtjrpqkN_mokGT6q9gD-VfYU0EZloB7BOxkEjpH-nh7OHQNslCvPXoocDqY2TRNir3q6nNyhLT2Sosp3j_1neJ-mUWqzlLvXIV7JYgd7WbQuONsy3NUGIpQjxErrdAtsMY-i7-RAEsKb7uIoOEbDyKLddJ80GaPsNNQOo4sIWCPlB1sxm5Me0_GJMKDAHSmUBt4euRJX07ZRHhIOcFjJuX1m6_63z2uVrQG_OXrrURC-IcMom2jiwQ', {}, {
+                proxy: {
+                    protocol: 'http',
+                    host: '172.17.199.252',
+                    port: 8080
+                }
             })
         })
     })
